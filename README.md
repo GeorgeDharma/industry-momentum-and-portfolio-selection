@@ -1,6 +1,6 @@
 # Industry momentum and portfolio selection
 
-**George Dharma · Quant portfolio project 11 · Python 3.12**
+**George Dharma · Quant portfolio · Python 3.12**
 
 Do industries with stronger past returns make better portfolio holdings after trading costs? This project compares equal industry weights, the ten strongest industries and a rule that keeps some existing holdings to reduce trading.
 
