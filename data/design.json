@@ -1,0 +1,71 @@
+{
+  "question": "Does lagged industry momentum improve portfolio selection after turnover and modelled trading costs?",
+  "universe": "French Data Library 49 value-weighted US industry research portfolios",
+  "start": "1970-01",
+  "development_end": "1999-12",
+  "validation_start": "2000-01",
+  "validation_end": "2009-12",
+  "test_start": "2010-01",
+  "test_end": "2025-12",
+  "signal": "Compound industry returns from holding month t-12 through t-2 inclusive; skip t-1",
+  "lookback_months": 11,
+  "shift_months": 2,
+  "eligibility": "All 11 signal observations plus prior month return must be present; never use holding-month return to choose eligibility",
+  "policies": [
+    "Equal industries",
+    "Top 10 momentum",
+    "Buffered momentum"
+  ],
+  "holding_count": 10,
+  "buffer_rank": 15,
+  "buffer_rule": "Retain previous holdings ranked 15 or better, then fill to ten from the highest remaining ranks; equal target weights",
+  "constraints": "Long only, fully invested, no leverage; ten 10% target weights for signal portfolios; equal target weights across eligible industries for benchmark",
+  "tie_break": "Industry code in alphabetical order",
+  "cost_bps": 10,
+  "cost_scenarios_bps": [
+    0,
+    10,
+    25,
+    50
+  ],
+  "cost_basis": "One-way charge on each dollar bought or sold; solve the cost-funded rebalance exactly and charge initial entry",
+  "turnover_definition": "One-way turnover is max(buys, sales) divided by pre-trade wealth; cash-funded entry is included",
+  "selection_rule": "Choose the momentum policy with the higher net information ratio versus equal industries during validation at 10 bp; ties choose Top 10 momentum",
+  "test_policy": "Freeze the selection before calculating final-block performance; do not redesign after seeing the test",
+  "nearby_parameters": {
+    "holding_counts": [
+      8,
+      10,
+      12
+    ],
+    "buffer_offsets": [
+      3,
+      5,
+      7
+    ],
+    "purpose": "Final robustness diagnostics only; do not use to replace the selected policy"
+  },
+  "subperiods": [
+    [
+      "2010-01",
+      "2014-12"
+    ],
+    [
+      "2015-01",
+      "2019-12"
+    ],
+    [
+      "2020-01",
+      "2025-12"
+    ]
+  ],
+  "inference": "Newey-West mean/OLS standard errors with six monthly lags; intervals are conditional on this single-vintage dataset and fixed design",
+  "benchmark": "Monthly equal allocation across eligible industries, with the same cost convention",
+  "liquidation": "No terminal liquidation; final value marks the continuing portfolio",
+  "source_urls": {
+    "industry": "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/49_Industry_Portfolios_CSV.zip",
+    "factors": "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+    "momentum": "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Momentum_Factor_CSV.zip"
+  },
+  "block_initialisation": "Each development, validation and final test block starts in cash, charges entry, and warms the signal from earlier observations."
+}

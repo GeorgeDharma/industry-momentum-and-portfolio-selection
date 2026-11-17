@@ -1,0 +1,26 @@
+{
+  "industry": {
+    "url": "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/49_Industry_Portfolios_CSV.zip",
+    "sha256_zip": "d1a3b0b9896e1e633ed2aa85e24ca144d7998f8ab2ff344e2379383ebeb7b836",
+    "sha256_csv": "633958bf36d25da6d95876bfc468536029db600c32c65b7a3e0f7fba59a04609",
+    "member": "49_Industry_Portfolios.csv"
+  },
+  "factors": {
+    "url": "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_CSV.zip",
+    "sha256_zip": "b03d39e4bb253dda0f14893db3b78e64b40b8d6549a0fc0fd4111dae84c98618",
+    "sha256_csv": "a3894d74d553cab812eabbe706bdbf443c97eb20b24b05e3e5f3ce47e46b90bb",
+    "member": "F-F_Research_Data_Factors.csv"
+  },
+  "momentum": {
+    "url": "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Momentum_Factor_CSV.zip",
+    "sha256_zip": "27ed60e5b2caa9ea334a261cddfa864a9926f6bf45e9677c95dfd835c5abb315",
+    "sha256_csv": "81ff7cab5517159daa5a66c83fd90d4076a0864be2d5fef179719c0f9049a8cb",
+    "member": "F-F_Momentum_Factor.csv"
+  },
+  "definitions": {
+    "url": "http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Siccodes49.zip",
+    "sha256_zip": "36761b4009107e11cd15cff0eb75f8837ef49f024524b7378634629bf90905d5",
+    "sha256_csv": "5d0c29b0325078ac3a51829840569af2d12eaed537328f979b6c56447c24827f",
+    "member": "Siccodes49.txt"
+  }
+}

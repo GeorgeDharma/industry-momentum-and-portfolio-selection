@@ -1,0 +1,16 @@
+{
+  "selected_policy": "Top 10 momentum",
+  "selection_rule": "Choose the momentum policy with the higher net information ratio versus equal industries during validation at 10 bp; ties choose Top 10 momentum",
+  "validation_information_ratios": {
+    "Top 10 momentum": 0.060736937507257636,
+    "Buffered momentum": 0.01390846795863506
+  },
+  "input_sha256": {
+    "design.json": "2089b01051eee8752b555d90f5fb2d52b1337fa8d31287a81244e58018fe4c52",
+    "definitions.csv": "5d0c29b0325078ac3a51829840569af2d12eaed537328f979b6c56447c24827f",
+    "factors.csv": "a3894d74d553cab812eabbe706bdbf443c97eb20b24b05e3e5f3ce47e46b90bb",
+    "industry.csv": "633958bf36d25da6d95876bfc468536029db600c32c65b7a3e0f7fba59a04609",
+    "momentum.csv": "81ff7cab5517159daa5a66c83fd90d4076a0864be2d5fef179719c0f9049a8cb"
+  },
+  "final_results_examined": false
+}
