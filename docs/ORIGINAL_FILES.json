@@ -1,57 +1,39 @@
 {
-  "source_package": "George_Dharma_11_Equity_Python.zip",
+  "source_package": "George_Dharma_GitHub_Projects_09-11.zip",
+  "source_directory": "George_Dharma_11_Equity_Python",
+  "source_package_sha256": "707829b301d98dcd607ff9e2a731bc74cfaeda19d7ab9910e2b7a0fd4f935844",
   "files": [
     {
+      "path": ".gitignore",
+      "sha256": "5537153c4feeb5404a104c26f38f9945a3d083de53dcceacabe3ff547f807400"
+    },
+    {
       "path": "George_Dharma_11_Equity_Notebook.ipynb",
-      "sha256": "ac46dfaf6b152ae61bb5ec32390a2c0f11feddfe84c8bcf270337b213bc8ea8d"
+      "sha256": "fbee15922fa7d2663abe9029bb07ccebafb4693dbef32591ace91dc1e69d0821"
     },
     {
       "path": "README.md",
-      "sha256": "1ac2f7bf0d534b747301f811cb6e84e9689f9bac89eb9c842732ef803ff91a58"
+      "sha256": "886175c00efb30d974753c2519a302b0a532025d955857ba1984f53c4c2dd127"
     },
     {
       "path": "data/design.json",
       "sha256": "2089b01051eee8752b555d90f5fb2d52b1337fa8d31287a81244e58018fe4c52"
     },
     {
-      "path": "data/source/definitions.csv",
-      "sha256": "5d0c29b0325078ac3a51829840569af2d12eaed537328f979b6c56447c24827f"
-    },
-    {
-      "path": "data/source/definitions.zip",
-      "sha256": "36761b4009107e11cd15cff0eb75f8837ef49f024524b7378634629bf90905d5"
-    },
-    {
-      "path": "data/source/factors.csv",
-      "sha256": "a3894d74d553cab812eabbe706bdbf443c97eb20b24b05e3e5f3ce47e46b90bb"
-    },
-    {
-      "path": "data/source/factors.zip",
-      "sha256": "b03d39e4bb253dda0f14893db3b78e64b40b8d6549a0fc0fd4111dae84c98618"
-    },
-    {
-      "path": "data/source/industry.csv",
-      "sha256": "633958bf36d25da6d95876bfc468536029db600c32c65b7a3e0f7fba59a04609"
-    },
-    {
-      "path": "data/source/industry.zip",
-      "sha256": "d1a3b0b9896e1e633ed2aa85e24ca144d7998f8ab2ff344e2379383ebeb7b836"
-    },
-    {
-      "path": "data/source/momentum.csv",
-      "sha256": "81ff7cab5517159daa5a66c83fd90d4076a0864be2d5fef179719c0f9049a8cb"
-    },
-    {
-      "path": "data/source/momentum.zip",
-      "sha256": "27ed60e5b2caa9ea334a261cddfa864a9926f6bf45e9677c95dfd835c5abb315"
-    },
-    {
       "path": "data/source/provenance.json",
-      "sha256": "d8204bcf4cbdfe9284e067d39db4f302827401ec0962fd974c37bc0680ec8278"
+      "sha256": "46034e97765e1387e40b0132b9a72d236b00abfd1f0850e1f4356c2cd10a41ba"
     },
     {
       "path": "equity/__init__.py",
       "sha256": "f971f302e9c13be177604fb7e5c4a037bd8d366d2cd0eca6cdf08e994cb44459"
+    },
+    {
+      "path": "equity/allocation.py",
+      "sha256": "a9cb50439e2397abf5184320efcfff61b71da7a574e077313243cee601c97332"
+    },
+    {
+      "path": "equity/allocation_figure.py",
+      "sha256": "78120605e49ee5826508411d1f33e2096090225b8dfffedee76adda5807d99cc"
     },
     {
       "path": "equity/analysis.py",
@@ -62,88 +44,36 @@
       "sha256": "601e7622e46b70c5086f4b52963217f765f41012b037cd29429601f160e0df27"
     },
     {
-      "path": "outputs/annual.csv",
-      "sha256": "3c25e4abb8c26b8bbc114bd2f80d039bdb7d05ed7ab7b3b8157ac90d6a35c53a"
+      "path": "fetch_data.py",
+      "sha256": "885f384dfe72cf03f489a80aab4c8f09bb95663a25b7b6224616921c46ff6dce"
     },
     {
-      "path": "outputs/contribution.csv",
-      "sha256": "bc412075d129ba9f731772f9d78b751093d06ec15aafcf8b1c707e2f741832ec"
+      "path": "outputs/active_industries.csv",
+      "sha256": "09604cf64c6083a8445dfefd38ebe24601a945d9a5f67d96a073fc3d7008fae1"
     },
     {
-      "path": "outputs/cost_sensitivity.png",
-      "sha256": "91ea63c9ec7558e1505adf53a1644be8d2196c7c1511e2855c018c6c0a8cb2c3"
+      "path": "outputs/allocation_monthly.csv",
+      "sha256": "f4846adc39ecdbc21e1ccdab21932264fe33e0784a3928d5b861e62ad1f2cd3c"
     },
     {
-      "path": "outputs/costs.csv",
-      "sha256": "a21a97f339466b89a0a1535410d3872a7d479818be794b363a5286538a806f78"
+      "path": "outputs/allocation_risk.png",
+      "sha256": "28e260bf7b9905748929feaf4ca132d720826c34266012bd3e317ba703aac516"
     },
     {
-      "path": "outputs/development_validation.csv",
-      "sha256": "9981ef95cfdd03ec4d279c4e68d71c54556f98b05cf18cccea9610181ef3791f"
+      "path": "outputs/allocation_summary.csv",
+      "sha256": "44cd4be0d93dd685d0bc48a5f05b842d98886752b099dbbd92cd7917ffd91191"
     },
     {
       "path": "outputs/development_validation.json",
       "sha256": "dc57e80fc9a4d830e9fbe319957e7b66562aa40af5afa4eb7b9385b131c4ea0d"
     },
     {
-      "path": "outputs/drawdowns.png",
-      "sha256": "045be0aec3c9cbd2254dd54bfbbe8b43f621784933a453c7fb8a00cac611b704"
-    },
-    {
-      "path": "outputs/factor_returns.csv",
-      "sha256": "831891d2fe54c9fe7109be804a1821e1d0eecb06bce2bb0548e41b0955cb7e4e"
-    },
-    {
-      "path": "outputs/factors.csv",
-      "sha256": "0cdb1c66abd829cb73932312f56c325c1134bb0aca4436f70aafa07c6bd751c7"
-    },
-    {
-      "path": "outputs/holdings.csv",
-      "sha256": "33da1086e0756756f8c7b360ac6d507216807d86608f697bc0adfbe6b1ef11e5"
-    },
-    {
-      "path": "outputs/industry_returns.csv",
-      "sha256": "29c9a3245d8124ccf522d44c3bf72747df4aacc9a5e89bf1c76c6c11325ff803"
-    },
-    {
       "path": "outputs/monthly.csv",
       "sha256": "6ddff76ba3b3d314488fbcc1427979c59a0327c18824257af54c705638fd184f"
     },
     {
-      "path": "outputs/nearby.csv",
-      "sha256": "b30e7423fcc1658279346032d4b063a81203f5b0362fcd6138d1ff75c6c2c974"
-    },
-    {
-      "path": "outputs/results.json",
-      "sha256": "237619de9eac13eed7f3ebc31bb81e82df71b019049158eadf15a6a497429390"
-    },
-    {
-      "path": "outputs/sample.csv",
-      "sha256": "6a3e827f54dd087e7f3b85ac948f835ae1bb0d58a48366c6fa9ca9f8deb81c47"
-    },
-    {
       "path": "outputs/selection_lock.json",
       "sha256": "bfb2b5cfb42c5638a253bcaedc34c82dc4675ebf62967e8b043d5e85a00d8bee"
-    },
-    {
-      "path": "outputs/signal_diagnostics.csv",
-      "sha256": "11e428a6cab45f900284f53e4e531874096a25cc239256a49d8cedbc807a1449"
-    },
-    {
-      "path": "outputs/signal_quality.png",
-      "sha256": "9e91ecc7984ab15f488ad57ebc5c77e8a14b666df3dd7160a92efd0b89241095"
-    },
-    {
-      "path": "outputs/subperiods.csv",
-      "sha256": "994415272f51199d49d6dbff37382ddb3682a97f4fd0db972e2c3bc00b23e2cd"
-    },
-    {
-      "path": "outputs/summary.csv",
-      "sha256": "9457df19bcca6a4e72b97cf77fe41dceaa532bb8b8de2d49925d1bec007df613"
-    },
-    {
-      "path": "outputs/wealth.png",
-      "sha256": "06567b1e9498a4e563792e156bb80d66ec27ab62bca00880dfb0b886955365af"
     },
     {
       "path": "requirements.txt",
@@ -151,11 +81,20 @@
     },
     {
       "path": "run_analysis.py",
-      "sha256": "82e1a661a7990f2e796ff9578bca56c81bace61853f0fe92c675f3200d8c554c"
+      "sha256": "3e6735638c3a55f76906fc0fa40d92824108f996fc3c7fc9bd892cf1a1d48af8"
+    },
+    {
+      "path": "tests/test_allocation.py",
+      "sha256": "65fdf181b56f99eb71b7f54eff790e5a683ae4207e8bbf4c980c9adc52aaa4f9"
     },
     {
       "path": "tests/test_equity.py",
       "sha256": "0a3f37725d2a77f381fbd3e70cc2b39d2b8e6d1f2e5e6cd62d95b032350d5254"
     }
-  ]
+  ],
+  "report": {
+    "source_package": "George_Dharma_Website_Projects_01-11.zip",
+    "path": "11_Equity/George_Dharma_11_Equity_Report.pdf",
+    "sha256": "89ca8108e95575945fbbd58723121eea98769a730a820fff98bb0920d973ec77"
+  }
 }

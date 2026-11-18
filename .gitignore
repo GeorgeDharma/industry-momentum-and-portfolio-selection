@@ -9,4 +9,7 @@ Thumbs.db
 .env
 .env.*
 !.env.example
-outputs/simulation_pnl.csv
+data/source/*
+!data/source/provenance.json
+outputs/industry_returns.csv
+outputs/factor_returns.csv

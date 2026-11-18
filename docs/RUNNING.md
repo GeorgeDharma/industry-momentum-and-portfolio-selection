@@ -44,13 +44,13 @@ On macOS or Linux:
 .venv/bin/python -m jupyterlab
 ```
 
-JupyterLab opens in your browser. Open `notebooks/analysis.ipynb`. Use **Kernel → Restart Kernel and Run All Cells** to run the notebook from a clean start. The first code cell recalculates the full experiment and can take a few minutes. Wait for it to finish before reading later results.
+JupyterLab opens in your browser. Open `notebooks/analysis.ipynb`. Use **Kernel → Restart Kernel and Run All Cells** to run the notebook from a clean start. The notebook displays the published results by default. To rerun the full experiment from the notebook, set `rebuild = True` in the first code cell and run all cells. This may take a few minutes.
 
 The notebook finds the project root automatically when opened from the root folder or its `notebooks` folder. Keep the complete folder structure together.
 
 ## What changes when you run it?
 
-The program overwrites generated tables and figures in `outputs/`. It uses bundled data, so no API keys, paid data account or network connection is required after installing dependencies. Input files and the original PDF report are not updated by the calculation. If you change assumptions, the new results will no longer necessarily match the PDF.
+The program overwrites generated tables and figures in `outputs/`. The first full run downloads four archives from the Kenneth R. French Data Library. Later runs use the cached inputs. The saved notebook and report can be read offline. Input files and the original PDF report are not updated by the calculation. If you change assumptions, the new results will no longer necessarily match the PDF.
 
 ## Common problems
 
@@ -60,7 +60,7 @@ The program overwrites generated tables and figures in `outputs/`. It uses bundl
 | `No module named numpy` or another dependency | Run the install command with the same `.venv` Python used to run the project. |
 | `No module named rates`, `options` or `equity` | Extract the full ZIP and run the script from the folder containing `run_analysis.py`. |
 | Notebook asks for a kernel | Select Python 3 from the JupyterLab session launched above. |
-| The first notebook cell is busy | It is running the analysis. Avoid starting another copy; allow a few minutes. |
+| The first notebook cell is busy | A rebuild is running. Allow it to finish before running other cells. |
 | GitHub cannot preview the notebook | Download the ZIP and open the notebook locally in JupyterLab. |
 
 Pinned analysis dependencies are in `requirements.txt`. Notebook tools are separate in `requirements-notebook.txt`. See [validation notes](VALIDATION.md) for the tested environment and results.
@@ -70,3 +70,7 @@ Pinned analysis dependencies are in `requirements.txt`. Notebook tools are separ
 Using the same environment's Python, run `run_analysis.py --stage develop` and then `run_analysis.py --stage test`. The first stage uses the earlier data to select a rule and write `outputs/selection_lock.json`. The second verifies input hashes before evaluating the final period. The default command runs both stages in that order.
 
 The lock's `final_results_examined: false` describes the point in the program before final evaluation. Rerunning this completed study does not create a new unseen test period. If you change the design after reading the final results, treat that as a new experiment requiring fresh evaluation data.
+
+## Source revisions and offline runs
+
+The sample runs through December 2025. The publisher can revise historical data. A fresh download is checked against the hashes used for the original report. Use `python fetch_data.py --exact` to require a match or `python fetch_data.py --refresh` to fetch the latest archives. If you already have the four archives, run `python fetch_data.py --from-dir "/path/to/archives" --exact` before starting the analysis. The [source record](../data/source/provenance.json) lists all four originals.
